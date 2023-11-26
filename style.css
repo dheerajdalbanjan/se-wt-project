@@ -12,6 +12,7 @@
 
 .form-row label {
     width: auto;
+    text-wrap: nowrap;
 }
 
 .form-col{
@@ -79,6 +80,7 @@ body {
 
 .header{
     margin: 0;
+    z-index: 1000;
     position: fixed;
     width: 100%;
     top: 0;
@@ -110,7 +112,7 @@ body {
 }
 
 form {
-    margin: 130px 18rem ;
+    margin: 150px 18rem ;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -137,8 +139,12 @@ form {
 }
 
 .form-header h4 {
-    font-weight: 600;
-    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 28px;
+    padding: 0 40px;
+    text-wrap: balance;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.66);
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.221);
@@ -172,7 +178,7 @@ hr{
 
 
 .submit{
-    background-color: rgb(0, 160, 0);
+    background-color: #2f9821;
     color: white;
     font-size: 18px;
     font-weight: 500;
@@ -191,13 +197,26 @@ hr{
 
 
 .clear{
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 5px 8px;
+    border-radius: 100px;
     color: white;
-    background-color: rgba(182, 15, 15, 0.734);
+    background-color: rgba(182, 15, 15, 0.53);
     border: none;
-    margin: 40px 25rem;
-    float: right;
+    position: fixed;
+    bottom: 5rem;
+    right: 5rem;
     cursor: pointer;
     justify-self: center;
+    box-shadow: 3px 3px 15px black;
+    font-size: 13px;
+    transition: all 0.3s ease-in-out;
+}
+
+.clear:hover{
+    opacity: 80%;
+}
+
+.clear:active{
+    box-shadow: 3px 3px 10px black;
+    scale: 90%;
 }

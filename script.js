@@ -1,3 +1,30 @@
+import {stateDistricts} from './data.js' ;
+
+console.log(Object.keys(stateDistricts)); 
+
+const state = document.getElementById("regis_state"); 
+const district = document.getElementById("regis_district");
+
+var state_html = "<option value='' >Select the State</option>\n" ;
+
+Object.keys(stateDistricts).map((e)=> state_html += `<option value='${e}' >${e}</option>\n`)
+
+state.innerHTML = state_html ;
+
+window.stateChangee = stateChangee ;
+window.cleaer = cleaer ;
+
+function stateChangee(){
+    const districts = stateDistricts[state.value] ;
+    var district_html = "<option value='' >Select the District</option>\n" ; 
+    Array.from(districts).map((e)=> district_html += `<option value='${e}' >${e}</option>\n`)
+    console.log(district_html); 
+
+    district.innerHTML = district_html; 
+    
+}
+
+
 window.onscroll = function(event){
     let height = window.scrollY;
     console.log(height);
