@@ -76,6 +76,7 @@ label {
 body {
     margin: 0;
     font-family: sans-serif;
+    background-color: #ececec;
 }
 
 .header{
@@ -117,7 +118,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #cccccc1f;
+    background-color: white;
     box-shadow: 1px 1px 10px #ccc;
 }
 
@@ -235,7 +236,7 @@ hr{
     background-color: #e9d0d0e9; /* Black background color */
     color: #971d1d; /* White text color */
     border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
+    padding: 5px; /* Padding */
     position: fixed; /* Sit on top of the screen */
     z-index: 1; /* Add a z-index if needed */
     left: 35%; /* Center the snackbar */
@@ -247,8 +248,11 @@ hr{
   }
 
   #snackbar h5 {
-    font-size: 20px ;
+    font-size: 18px ;
     text-align: center;
+    margin: 45px 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
 
   }
 
@@ -256,6 +260,7 @@ hr{
     display: flex;
     flex-direction: column;
     gap: 5px;
+    margin: 15px 8px;
   }
   
   /* Show the snackbar when clicking on a button (class added with JavaScript) */
@@ -296,12 +301,15 @@ hr{
     width: 30px;
     padding: 5px;
     display: flex;
+    margin: 5px 5px;
     flex-direction: column;
     gap: 2px;
     background-color: transparent;
     border: none;
     color: #971d1d;
     transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 0;
   }
 
   .snackbar-button:focus{

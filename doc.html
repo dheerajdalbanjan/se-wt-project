@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASE HISTORY FORM AND TREATMENT PLAN</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }
+
+        h3, h4 {
+            color: #333;
+        }
+
+        form {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 0;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>TAPOVANA AYURVEDIC MEDICAL COLLEGE & HOSPITAL</h3>
+    <h4>CASE HISTORY FORM AND TREATMENT PLAN</h4>
+
+    <form action="submit.php" method="post">
+        <table>
+            <tr>
+                <th>Registration No.</th>
+                <td><p id="registration_no"></p></td>
+                <th>Date of Registration</th>
+                <td><p id="date_of_registration"></p></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Name</th>
+                <td><p id="name"></p></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Address</th>
+                <td><p id="add"></p></td>
+                <th>State</th>
+                <td><p id="state"></p></td>
+                <th>District</th>
+                <td><p id="district"></p></td>
+                <th>Taluk</th>
+                <td><p id="taluk"></p></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Home Phone</th>
+                <td><p id="hp"></p></td>
+                <th>Telephone</th>
+                <td><p id="tel"></p></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Sex</th>
+                <td><p id="sex"></p></td>
+                <th>Date of Birth</th>
+                <td><p id="date_of_birth"></p></td>
+                <th>Religion</th>
+                <td><p id="religion"></p></td>
+                <th>Community</th>
+                <td><p id="community"></p></td>
+                <th>Age</th>
+                <td><p id="age"></p></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Educational Qualification</th>
+                <td><p id="educational_qualification"></p></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>Occupation</th>
+                <td><p id="Occupation"></p></td>
+                <th>Income</th>
+                <td><p id="Income"></p></td>
+                <th>Marital Status</th>
+                <td><p id="Marital status"></p></td>
+            </tr>
+        </table>
+
+        <!-- Living Arrangements -->
+        <h4>Living Arrangements: (please tick/mark)</h4>
+        <table>
+            <tr>
+                <td>Living with Family</td>
+                <td><input type="radio" name="living_arrangements" value="Living with Family"></td>
+                <td>Living with Friends or Distant Relatives</td>
+                <td><input type="radio" name="living_arrangements" value="Living with Friends or Distant Relatives"></td>
+            </tr>
+            <tr>
+                <td>Lives Alone</td>
+                <td><input type="radio" name="living_arrangements" value="Lives Alone"></td>
+                <td>On the Street</td>
+                <td><input type="radio" name="living_arrangements" value="On the Street"></td>
+            </tr>
+        </table>
+        
+        <!-- Referral -->
+        <h4>Referral:</h4>
+        <table>
+            <tr>
+                <td>Self</td>
+                <td><input type="radio" name="referral" value="Self"></td>
+                <td>Recovered Addict</td>
+                <td><input type="radio" name="referral" value="Recovered Addict"></td>
+            </tr>
+            <tr>
+                <td>Friends</td>
+                <td><input type="radio" name="referral" value="Friends"></td>
+                <td>Employer</td>
+                <td><input type="radio" name="referral" value="Employer"></td>
+            </tr>
+            <tr>
+                <td>Family</td>
+                <td><input type="radio" name="referral" value="Family"></td>
+                <td>Media</td>
+                <td><input type="radio" name="referral" value="Media"></td>
+            </tr>
+            <tr>
+                <td>Social Worker</td>
+                <td><input type="radio" name="referral" value="Social Worker"></td>
+                <td>Through Awareness Programme</td>
+                <td><input type="radio" name="referral" value="Through Awareness Programme"></td>
+            </tr>
+            <tr>
+                <td>Physicians</td>
+                <td><input type="radio" name="referral" value="Physicians"></td>
+                <td>Any Other</td>
+                <td><input type="radio" name="referral" value="Any Other"></td>
+            </tr>
+        </table>
+
+        <!-- Additional Information -->
+        <h4>Additional Information:</h4>
+        <table>
+            <tr>
+                <th>Name of Family Member/Specify Name of Support Person</th>
+                <td><p id="support_person_name"></p></td>
+            </tr>
+            <tr>
+                <th>Address Accompanied the Person</th>
+                <td><p id="accompanied_address"></p></td>
+            </tr>
+            <tr>
+                <th>Telephone</th>
+                <td><p id="additional_telephone"></p></td>
+            </tr>
+        </table>
+
+    </form>
+
+
+
+    <script src="dummy.js"></script>
+</body>
+
+</html>
