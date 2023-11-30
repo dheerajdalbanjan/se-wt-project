@@ -369,8 +369,8 @@
 
 
     <div style="display: none;" id="pdf">
-        <h3>TAPOVANA AYURVEDIC MEDICAL COLLEGE & HOSPITAL</h3>
-        <h4>CASE HISTORY FORM AND TREATMENT PLAN</h4>
+        <h2>TAPOVANA AYURVEDIC MEDICAL COLLEGE & HOSPITAL</h2>
+        <h3>CASE HISTORY FORM AND TREATMENT PLAN</h3>
 
         <form action="submit.php" method="post">
             <table>
@@ -393,26 +393,29 @@
                         <p id="p_regis_name"></p>
                     </td>
                 </tr>
-            </table>
-
-            <table>
                 <tr>
                     <th>Address</th>
                     <td>
                         <p id="p_regis_addr"></p>
                     </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    
+                    <th>Taluk</th>
+                    <td>
+                        <p id="p_regis_taluk"></p>
+                    </td><th>District</th>
+                    <td>
+                        <p id="p_regis_district"></p>
+                    </td>
                     <th>State</th>
                     <td>
                         <p id="p_regis_state"></p>
                     </td>
-                    <th>District</th>
-                    <td>
-                        <p id="p_regis_district"></p>
-                    </td>
-                    <th>Taluk</th>
-                    <td>
-                        <p id="p_regis_taluk"></p>
-                    </td>
+                    
                 </tr>
             </table>
 
@@ -432,25 +435,28 @@
             <table>
                 <tr>
                     <th>Sex</th>
+                    <th>Age</th>
+                    <th>Date of Birth</th>
+                    <th>Religion</th>
+                    <th>Community</th>
+                </tr>
+                <tr>
                     <td>
                         <p id="p_regis_sex"></p>
                     </td>
-                    <th>Date of Birth</th>
-                    <td>
-                        <p id="p_regis_dob"></p>
-                    </td>
-                    <th>Religion</th>
-                    <td>
-                        <p id="p_regis_religion"></p>
-                    </td>
-                    <th>Community</th>
-                    <td>
-                        <p id="p_regis_community"></p>
-                    </td>
-                    <th>Age</th>
                     <td>
                         <p id="p_regis_age"></p>
                     </td>
+                    <td>
+                        <p id="p_regis_dob"></p>
+                    </td>
+                    <td>
+                        <p id="p_regis_religion"></p>
+                    </td>
+                    <td>
+                        <p id="p_regis_community"></p>
+                    </td>
+
                 </tr>
             </table>
 
@@ -500,8 +506,30 @@
                 </table>
             </div>
 
+
+            <table>
+                <tr>
+                    <th>Name of Family Member/Specify Name of Support Person</th>
+                    <td>
+                        <p id="p_regis_family_mem_name"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Address Accompanied the Person</th>
+                    <td>
+                        <p id="p_regis_address_accomp"></p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Telephone</th>
+                    <td>
+                        <p id="p_regis_tele_accomp"></p>
+                    </td>
+                </tr>
+            </table>
+
             <!-- Referral -->
-            <div id="p_regis_referal" <h4>Referral:</h4>
+            <div id="p_regis_referal"> <h4>Referral:</h4>
                 <table>
                     <tr>
                         <td>Self</td>
@@ -511,7 +539,7 @@
                     </tr>
                     <tr>
                         <td>Friends</td>
-                        <td><input type="radio" name="referral" value="Friends"></td>
+                        <td><input type="radio"  name="referral" value="Friends"></td>
                         <td>Employer</td>
                         <td><input type="radio" name="referral" value="Employer"></td>
                     </tr>
@@ -535,28 +563,7 @@
                     </tr>
                 </table>
 
-                <!-- Additional Information -->
-                <h4>Additional Information:</h4>
-                <table>
-                    <tr>
-                        <th>Name of Family Member/Specify Name of Support Person</th>
-                        <td>
-                            <p id="p_regis_family_mem_name"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Address Accompanied the Person</th>
-                        <td>
-                            <p id="p_regis_address_accomp"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Telephone</th>
-                        <td>
-                            <p id="p_regis_tele_accomp"></p>
-                        </td>
-                    </tr>
-                </table>
+                
 
         </form>
 

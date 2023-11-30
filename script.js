@@ -7,11 +7,11 @@ try {
     var localData = JSON.parse(localStorage.getItem('tapovan'))
 
     Object.keys(localData).forEach((key) => {
-        if (!(key in ['regis_state', 'regis_district', 'regis_taluk'])) {
-
+        if (!['regis_state', 'regis_district', 'regis_taluk'].includes(key)) {
             document.getElementById(key).value = localData[key];
         }
     })
+
 
 } catch (err) {
     console.log(err);
@@ -47,6 +47,8 @@ function stateChangee() {
 
 }
 
+
+// formchange -> called whenever the form is changed
 
 window.rmChange = (e) => {
     var value = e.target.form;
@@ -196,19 +198,34 @@ window.validateForm = (e) => {
         var pdf = document.getElementById("pdf");
         Object.keys(data).forEach((key) => {
             try {
-                if (`p_${key}` === 'p_regis_living' || `p_${key}` === 'p_regis_referal') {
-                    let radioButton = document.querySelector(`input[type="radio"][value="${data[key]}"]`);
+                if (`p_${key}` === 'p_regis_living' ) {
+                    let radioButton = document.querySelector(`input[type="radio"][name="living_arrangements"][value="${data[key]}"]`);
 
                     if (radioButton) {
-                        radioButton.checked = true;
-                        radioButton.className += 'check' ; 
-                        radioButton.parentElement.className += 'check'; 
-                        console.log(radioButton) ;
+                        radioButton.parentElement.style.fontSize = "20px";
+                        radioButton.parentElement.innerHTML = '◉';
+                        
+                        console.log(radioButton.parentElement)
+                        console.log(radioButton);
                     } else {
                         console.log("Radio button not found");
                     }
 
                     console.log(data[key])
+                }
+                else if(`p_${key}` === 'p_regis_referal'){
+                    let radioButton = document.querySelector(`input[type="radio"][name="referral"][value="${data[key]}"]`);
+
+                    if (radioButton) {
+                        
+                        radioButton.parentElement.style.fontSize = "20px"; 
+                        radioButton.parentElement.innerHTML = '◉';
+                        console.log(radioButton.parentElement)
+                        console.log(radioButton);
+                    } else {
+                        console.log("Radio button not found");
+                    }
+
                 }
                 else
                     document.getElementById(`p_${key}`).innerHTML = data[key];
@@ -221,52 +238,56 @@ window.validateForm = (e) => {
         var divContents = pdf.innerHTML;
         var printWindow = window.open('', '', 'height=400,width=800');
         printWindow.document.write(`<html><head><title>Tapovan</title><style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 0;
-                text-align: center;
-            }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
 
-            check {
-                background-color: blue ; 
+        h4 {
+            color: #333;
+            font-size: 20px;
+        }
 
-            }
-    
-            h3, h4 {
-                color: #333;
-            }
-    
-            form {
-                max-width: 800px;
-                margin: auto;
-            }
-    
-            table {
-                width: 100%;
-                border-collapse: collapse;
-                margin-bottom: 20px;
-            }
-    
-            th, td {
-                padding: 10px;
-                border: 1px solid #ddd;
-            }
-    
-            .input-group {
-                display: flex;
-                justify-content: space-between;
-            }
-    
-            label {
-                display: block;
-                margin-bottom: 5px;
-            }
-    
-            p {
-                margin: 0;
-                padding: 8px;
-                box-sizing: border-box;
-            }
+        h3, h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 800px;
+            margin: auto;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px ;
+            border: 1px solid #ddd;
+            text-align: start;
+        }
+
+        
+
+        .input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 0;
+            padding: 8px;
+            box-sizing: border-box;
+        }
         </style>`);
         printWindow.document.write('</head><body >');
         printWindow.document.write(divContents);
