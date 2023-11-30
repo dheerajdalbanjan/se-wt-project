@@ -1,0 +1,20 @@
+<select required name="regis_living" id="regis_living">
+                    <option value="">Select your Living</option>
+                    <option value="Family">Living with Family</option>
+                    <option value="Friends">Lving with Friends or Distant Relatives</option>
+                    <option value="Alone">Living Alone</option>
+                    <option value="Street">On the Street</option>
+                </select>
+
+
+                <option value="">Select the Referal</option>
+                    <option value="self">Self</option>
+                    <option value="Family">Family</option>
+                    <option value="Friends">Friends or Distant Relatives</option>
+                    <option value="SocialWorker">Social Worker</option>
+                    <option value="Physicians">Physicians</option>
+                    <option value="RecoveredAddict">Recovered Addict</option>
+                    <option value="Employer">Employer</option>
+                    <option value="Media">Media</option>
+                    <option value="awarenessProgram">Through awareness Programs</option>
+                    <option value="Anyother">Anyother</option>

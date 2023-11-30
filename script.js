@@ -205,8 +205,6 @@ window.validateForm = (e) => {
                         radioButton.parentElement.style.fontSize = "20px";
                         radioButton.parentElement.innerHTML = '◉';
                         
-                        console.log(radioButton.parentElement)
-                        console.log(radioButton);
                     } else {
                         console.log("Radio button not found");
                     }
@@ -220,8 +218,6 @@ window.validateForm = (e) => {
                         
                         radioButton.parentElement.style.fontSize = "20px"; 
                         radioButton.parentElement.innerHTML = '◉';
-                        console.log(radioButton.parentElement)
-                        console.log(radioButton);
                     } else {
                         console.log("Radio button not found");
                     }
